@@ -74,6 +74,13 @@
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
+/* Display-only grade so the portrait sits in the page's warm palette instead
+   of reading as a dark rectangle on cream. Delete this rule to show the photo
+   exactly as supplied -- the file itself is untouched either way. */
+.portrait-lift {
+  filter: brightness(1.06) contrast(1.03) saturate(1.04);
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;

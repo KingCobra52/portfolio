@@ -1,7 +1,7 @@
 import { hero, profile } from "@/data/profile";
 import Annotation from "./Annotation";
 import Button from "./Button";
-import HeroMotif from "./HeroMotif";
+import Portrait from "./Portrait";
 import Swoosh from "./Swoosh";
 import { ArrowIcon, GitHubIcon, LinkedInIcon } from "./Icons";
 
@@ -67,10 +67,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right column: marginalia around the motif. Hidden on small screens,
+      {/* Right column: marginalia around the portrait. Hidden on small screens,
           where it would only crowd the headline. */}
       <div className="relative hidden min-h-[22rem] lg:block">
-        <HeroMotif className="absolute right-0 top-2 h-[19rem] w-[19rem] text-script/50" />
+        {/* The photo is opaque where the old line drawing was not, so the
+            marginalia sit clear of it: the flow notes down the left, the school
+            note above it, and nothing overlapping. */}
+        <Portrait className="absolute right-0 top-[6.5rem]" />
 
         <Annotation arrow="down" arrowClassName="h-8 w-5" className="absolute left-0 top-0">
           {hero.notes.flow[0]}
@@ -89,7 +92,7 @@ export default function Hero() {
           {hero.notes.school}
         </Annotation>
 
-        <div aria-hidden="true" className="absolute bottom-8 right-1 flex flex-col items-end">
+        <div aria-hidden="true" className="absolute bottom-2 left-8 flex flex-col items-start">
           {hero.notes.practice.map((w) => (
             <span key={w} className="font-script text-xl leading-[1.15] text-script">
               {w}
@@ -97,9 +100,6 @@ export default function Hero() {
           ))}
         </div>
 
-        <p className="font-display absolute bottom-0 left-0 max-w-[13rem] text-2xl font-medium leading-tight">
-          {hero.pullQuote}
-        </p>
       </div>
     </section>
   );
