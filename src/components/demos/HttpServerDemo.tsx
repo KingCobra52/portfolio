@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { fieldClass } from "./controls";
 
 type Method = "GET" | "POST" | "HEAD";
 const methods: Method[] = ["GET", "POST", "HEAD"];
@@ -139,8 +140,7 @@ export default function HttpServerDemo() {
   const labelEvery = clients > 16 ? 4 : 1;
   const H = clients * rowH + 24;
 
-  const selectClass =
-    "rounded-md border border-border bg-bg px-3 py-2 text-sm focus-visible:outline-2 focus-visible:outline-accent";
+  const selectClass = fieldClass;
 
   return (
     <div className="space-y-10">
@@ -223,12 +223,20 @@ export default function HttpServerDemo() {
 
         <div className="mt-4 overflow-x-auto rounded-md border border-border bg-bg p-3">
           <svg viewBox={`0 0 ${W} ${H}`} width="100%" className="min-w-[420px]" role="img" aria-label={`Completion timeline for ${clients} clients in ${modeLabels[mode]} mode, total ${Math.round(total)} milliseconds`}>
-            {ticks.map((t) => {
+            {ticks.map((t, i) => {
               const x = 40 + (t / maxAxis) * (W - 50);
+              // The last label would run past the viewBox if it stayed centred.
+              const last = i === ticks.length - 1;
               return (
                 <g key={t}>
                   <line x1={x} x2={x} y1={0} y2={H - 20} stroke="var(--border)" strokeWidth="1" />
-                  <text x={x} y={H - 6} fontSize="9" textAnchor="middle" fill="var(--muted)">
+                  <text
+                    x={x}
+                    y={H - 6}
+                    fontSize="9"
+                    textAnchor={last ? "end" : "middle"}
+                    fill="var(--muted)"
+                  >
                     {t}ms
                   </text>
                 </g>

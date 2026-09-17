@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { chipButtonClass, fieldClass } from "./controls";
 
 type Spot = { id: string; name: string; lat: number; lng: number };
 
@@ -62,8 +63,7 @@ export default function CampusCabsDemo() {
   // A generic rideshare estimate for comparison: booking fee + base + per mile + per minute, with a floor.
   const rideshare = same ? 0 : Math.max(8, 2.75 + 2.5 + 2.2 * miles + 0.35 * minutes);
 
-  const selectClass =
-    "w-full rounded-md border border-border bg-bg px-3 py-2 text-sm focus-visible:outline-2 focus-visible:outline-accent";
+  const selectClass = `w-full ${fieldClass}`;
 
   return (
     <div className="grid gap-6 md:grid-cols-[1fr_1fr]">
@@ -84,7 +84,7 @@ export default function CampusCabsDemo() {
             setFromId(toId);
             setToId(fromId);
           }}
-          className="rounded-md border border-border px-3 py-1.5 text-xs font-medium text-muted transition hover:border-accent hover:text-accent"
+          className={`${chipButtonClass} text-muted`}
         >
           Swap pickup and dropoff
         </button>

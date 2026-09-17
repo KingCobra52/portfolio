@@ -10,6 +10,23 @@ export const profile = {
   github: "https://github.com/KingCobra52",
   linkedin: "https://www.linkedin.com/in/siddarth-thota-0541b3265/",
   repo: "https://github.com/KingCobra52/portfolio",
+
+  // Drop the PDF at public/resume.pdf. Set to null to hide the Resume button.
+  resume: "/resume.pdf" as string | null,
+};
+
+// The hero headline is split so one word can be set in coral italic.
+export const hero = {
+  eyebrow: ["Software engineer", "Product builder", "Problem solver"],
+  headline: { before: "Engineering products people can", emphasis: "actually", after: "use." },
+  sub: "Penn State CS student building mobile products, backend systems, and thoughtful digital experiences.",
+  pullQuote: "Better software for a more connected campus.",
+  // Handwritten marginalia. Decorative only -- these are aria-hidden.
+  notes: {
+    flow: ["Ideas", "Products", "Real impact"],
+    school: "Penn State Computer Science",
+    practice: ["Build", "Learn", "Iterate"],
+  },
 };
 
 export const about = [
