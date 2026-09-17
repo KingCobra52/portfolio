@@ -2,6 +2,6 @@
 
 Static files served from the site root.
 
-- `resume.pdf` — **not committed.** The Résumé button in the hero links to
-  `/resume.pdf`. Drop the file here and it works. To hide the button instead,
-  set `resume: null` in `src/data/profile.ts`.
+- `resume.pdf` — the résumé the hero's Résumé button links to, at `/resume.pdf`.
+  Replace this file to publish a new version. To hide the button instead, set
+  `resume: null` in `src/data/profile.ts`.

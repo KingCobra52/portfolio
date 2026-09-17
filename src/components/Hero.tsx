@@ -39,7 +39,13 @@ export default function Hero() {
           </Button>
 
           {profile.resume && (
-            <Button href={profile.resume} external variant="outline" size="lg">
+            <Button
+              href={profile.resume}
+              external
+              variant="outline"
+              size="lg"
+              aria-label="Résumé (opens in a new tab)"
+            >
               Résumé
             </Button>
           )}
