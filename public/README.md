@@ -2,10 +2,10 @@
 
 Static files served from the site root.
 
-- `resume.pdf` — **not committed.** The Résumé button in the hero links to
-  `/resume.pdf`. Drop the file here and it works. To hide the button instead,
-  set `resume: null` in `src/data/profile.ts`.
-- `portrait.jpg` — **not committed.** The hero photo. Drop the file here and it
-  appears automatically; until then the hero renders its handwritten notes with
-  no photo rather than a broken image. Change the path or set `portrait: null`
-  in `src/data/profile.ts` to control it.
+- `resume.pdf` — the résumé the hero's Résumé button links to, at `/resume.pdf`.
+  Replace this file to publish a new version. To hide the button instead, set
+  `resume: null` in `src/data/profile.ts`.
+- `portrait.jpg` — the hero photo, at `/portrait.jpg`. Replace this file to
+  change it, or set `portrait: null` in `src/data/profile.ts` to hide it. The
+  component checks at build whether the file is present, so a missing photo
+  leaves the hero's handwritten notes in place rather than a broken image.

@@ -37,8 +37,9 @@ Each project page has an interactive demo in `src/components/demos/`.
 
 ## Résumé
 
-The hero's Résumé button links to `/resume.pdf`. Drop the file in `public/` and
-it works. To hide the button instead, set `resume: null` in `src/data/profile.ts`.
+The hero's Résumé button links to `/resume.pdf`, which lives at
+`public/resume.pdf` and opens in a new tab. Replace that file to publish a new
+version. To hide the button instead, set `resume: null` in `src/data/profile.ts`.
 
 ## Design system
 

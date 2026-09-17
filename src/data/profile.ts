@@ -11,7 +11,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/siddarth-thota-0541b3265/",
   repo: "https://github.com/KingCobra52/portfolio",
 
-  // Drop the PDF at public/resume.pdf. Set to null to hide the Resume button.
+  // Served from public/resume.pdf. Set to null to hide the Resume button.
   resume: "/resume.pdf" as string | null,
 
   // Drop the photo at public/portrait.jpg. Set to null to hide it.
