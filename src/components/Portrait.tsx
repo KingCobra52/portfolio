@@ -54,7 +54,7 @@ export default function Portrait({ className = "" }: { className?: string }) {
         {/* Softens the hard bottom edge into the page. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[32%]"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[24%]"
           style={{ background: "linear-gradient(to bottom, transparent, var(--bg) 92%)" }}
         />
       </div>
