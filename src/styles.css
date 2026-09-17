@@ -1,0 +1,63 @@
+:root {
+  font-family: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+  color: #3b4d6a;
+  background: #fefbf8;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body { margin: 0; min-width: 320px; -webkit-font-smoothing: antialiased; }
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10vh 6vw;
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: .025em;
+}
+
+.ideas { width: max-content; }
+.ideas .arrow {
+  display: block;
+  width: 60px;
+  height: 84px;
+  padding-left: 11px;
+  color: #718098;
+  font-family: Georgia, serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.products { margin-left: 62px; }
+.products + .arrow { margin-left: 62px; }
+.impact { margin-left: 126px; white-space: nowrap; }
+
+.education {
+  position: absolute;
+  top: 10vh;
+  right: 5vw;
+  margin: 0;
+  text-align: right;
+}
+
+.mantra {
+  position: absolute;
+  left: 12vw;
+  bottom: 10vh;
+  margin: 0;
+  font-size: clamp(26px, 3vw, 38px);
+}
+
+@media (max-width: 680px) {
+  .page { padding: 8vh 7vw; font-size: clamp(27px, 6vw, 38px); }
+  .education { top: auto; right: 7vw; bottom: 23vh; font-size: .8em; }
+  .mantra { left: 9vw; bottom: 8vh; }
+}
