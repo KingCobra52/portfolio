@@ -68,10 +68,11 @@ export const projects: Project[] = [
   {
     slug: "artiste",
     name: "Artiste",
-    tagline: "A virtual artist trading platform for iOS.",
-    short: "iOS trading app where music fans buy and sell shares in artists.",
+    tagline: "Invest in the artists you believe in.",
+    short:
+      "iOS app where music fans discover artists, trade virtual shares, and build portfolios that move with streaming data.",
     summary:
-      "A virtual artist trading platform for iOS, nearing App Store release. Fans discover artists, place buy and sell orders, and track a portfolio whose prices move with real streaming data.",
+      "Artiste turns music fandom into an interactive experience. Fans discover artists, buy and sell virtual shares, and build portfolios whose prices move with real-world streaming performance.",
     status: "Nearing App Store release",
     featured: true,
     tint: "peach",
@@ -80,17 +81,19 @@ export const projects: Project[] = [
     repo: "https://github.com/KingCobra52/artiste_mobile_v2",
     story: {
       problem:
-        "Fans wanted a way to back the artists they follow, but the moment real balances are involved, two taps on Buy cannot both succeed.",
+        "Music fans can stream, follow, and share the artists they love, but those experiences are mostly passive. There isn't an engaging way for fans to discover talent early, back the artists they believe in, and follow their growth over time.",
       approach:
-        "Built an iOS app on a FastAPI backend with JWT authentication, transactional safeguards enforced at the database level, and idempotent YouTube and Last.fm pipelines.",
+        "I designed Artiste around discovering, trading, and collecting artists. Fans can explore trending and emerging artists, buy and sell virtual shares, watch prices respond to streaming data, and build a portfolio around their taste in music.",
       outcome:
-        "A nearly App Store-ready app with 65 mocked unit tests, and pipelines batching up to 50 lookups and database writes per request across 24 artists.",
+        "A nearly App Store-ready iOS experience that combines music discovery with a virtual marketplace—turning an artist's growth into something fans can follow, participate in, and build a collection around.",
     },
+    // Hardest engineering first: the story above is product-led, so this list
+    // is where the depth lives.
     bullets: [
-      "JWT authentication, artist discovery, buy/sell orders, and portfolio tracking.",
       "Transactional safeguards that stop concurrent overspending and duplicate sales at the database level.",
       "Idempotent YouTube and Last.fm pipelines for 24 artists, batching up to 50 lookups and database writes per request.",
       "Three scheduled daily runs with failure isolation, monitoring, and 65 mocked unit tests.",
+      "JWT authentication, artist discovery, buy/sell orders, and portfolio tracking.",
     ],
     learned:
       "The hard part was not the trading UI, it was money. Two taps on Buy, or two requests racing for the same cash balance, cannot both succeed. I ended up leaning on database transactions and idempotency keys instead of trusting the client, and writing tests that simulate the race.",

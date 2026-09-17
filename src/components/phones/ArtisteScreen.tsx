@@ -34,14 +34,14 @@ export default function ArtisteScreen() {
         <h4 className="font-display text-[15px] font-semibold leading-[1.12] tracking-tight text-white">
           Discover
           <br />
-          Collect
+          Trade
           <br />
-          Support Artists
+          Collect Artists
         </h4>
         <p className="mt-1 font-sans text-[7.5px] leading-snug text-white/55">
-          A more connected
+          Invest in the artists
           <br />
-          music community.
+          you believe in.
         </p>
       </div>
 
