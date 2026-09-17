@@ -28,7 +28,7 @@ export default function CampusCabsScreen() {
       </div>
 
       <div className="shrink-0 px-4">
-        <h4 className="font-display text-[19px] font-semibold leading-[1.05] tracking-tight">
+        <h4 className="font-display text-[18px] font-semibold leading-[1.03] tracking-tight">
           Get there
           <br />
           together.
@@ -41,7 +41,7 @@ export default function CampusCabsScreen() {
       </div>
 
       {/* Route map */}
-      <div className="mx-4 mt-2.5 h-[72px] shrink-0 overflow-hidden rounded-xl bg-[#eef1f6]">
+      <div className="mx-4 mt-2 h-[60px] shrink-0 overflow-hidden rounded-xl bg-[#eef1f6]">
         <svg viewBox="0 0 160 96" preserveAspectRatio="xMidYMid slice" className="h-full w-full">
           <rect width="160" height="96" fill="#eef1f6" />
           {/* street grid */}
@@ -70,12 +70,12 @@ export default function CampusCabsScreen() {
       </div>
 
       {/* From / To */}
-      <div className="mx-4 mt-2.5 shrink-0 space-y-1.5">
+      <div className="mx-4 mt-2 shrink-0 space-y-1">
         {[
           { label: "From", value: "University Park", d: "M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z" },
           { label: "To", value: "State College", d: "M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z" },
         ].map((f) => (
-          <div key={f.label} className="flex items-center gap-2 rounded-lg border border-[#16233f]/12 px-2 py-1.5">
+          <div key={f.label} className="flex items-center gap-2 rounded-lg border border-[#16233f]/12 px-2 py-1">
             <svg viewBox="0 0 24 24" className="h-3 w-3 shrink-0 text-[#16233f]/40" fill="none" stroke="currentColor" strokeWidth="2">
               <path d={f.d} />
               <circle cx="12" cy="10" r="2.4" />
@@ -88,7 +88,7 @@ export default function CampusCabsScreen() {
         ))}
       </div>
 
-      <div className="mx-4 mt-2.5 shrink-0 rounded-lg bg-[#16233f] py-2 text-center">
+      <div className="mx-4 mt-2 shrink-0 rounded-lg bg-[#16233f] py-1.5 text-center">
         <span className="font-sans text-[9.5px] font-semibold text-white">Find a ride</span>
       </div>
 

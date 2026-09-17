@@ -30,7 +30,7 @@ export default function ArtisteScreen() {
       </div>
 
       {/* Hero card */}
-      <div className="mx-3 shrink-0 overflow-hidden rounded-xl bg-[#191a20] px-3 py-2.5">
+      <div className="mx-3 shrink-0 overflow-hidden rounded-xl bg-[#191a20] px-3 py-2">
         <h4 className="font-display text-[15px] font-semibold leading-[1.12] tracking-tight text-white">
           Discover
           <br />

@@ -67,7 +67,7 @@ export default function Nav() {
 
           <Link
             href="/#contact"
-            className="ml-2 hidden items-center gap-2 rounded-full bg-fg px-5 py-2.5 font-sans text-sm font-medium text-bg transition hover:bg-accent hover:text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-ink md:inline-flex"
+            className="ml-2 hidden items-center gap-2 rounded-full bg-fg px-5 py-2.5 font-sans text-sm font-medium text-bg transition hover:bg-accent hover:text-on-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-ink md:inline-flex"
           >
             Let&apos;s build
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">

@@ -9,9 +9,12 @@ const labels: { key: keyof Story; label: string }[] = [
 /** The numbered Problem / Approach / Outcome narrative. */
 export default function StorySteps({
   story,
+  headingLevel: Heading = "h3",
   className = "",
 }: {
   story: Story;
+  /** h3 under a section <h2>, h4 when nested under a card's <h3>. */
+  headingLevel?: "h3" | "h4";
   className?: string;
 }) {
   return (
@@ -25,7 +28,7 @@ export default function StorySteps({
             {i + 1}
           </span>
           <div>
-            <h4 className="font-sans text-sm font-semibold text-fg">{l.label}</h4>
+            <Heading className="font-sans text-sm font-semibold text-fg">{l.label}</Heading>
             <p className="mt-1 text-sm leading-relaxed text-muted">{story[l.key]}</p>
           </div>
         </li>

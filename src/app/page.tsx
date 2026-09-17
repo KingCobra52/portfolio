@@ -17,7 +17,7 @@ export default function Home() {
 
         <section id="work" className="scroll-mt-24 pb-4">
           <div className="border-t border-border pt-4">
-            <Eyebrow>Selected work</Eyebrow>
+            <Eyebrow as="h2">Selected work</Eyebrow>
           </div>
           <div className="mt-5 grid gap-5 lg:grid-cols-2">
             {featuredProjects.map((p) => (

@@ -16,6 +16,9 @@
   --accent: #f05c34;
   --accent-ink: #b83a1c;
   --accent-soft: #fdeae2;
+  /* Text sitting on top of --accent. Stays dark in both themes: cream on
+     coral is only 2.09:1, navy on coral is 4.67:1 (light) / 6.97:1 (dark). */
+  --on-accent: #16233f;
 
   /* Handwritten annotation ink. */
   --script: #3a4a6b;
@@ -37,6 +40,7 @@
   --accent: #ff7a55;
   --accent-ink: #ffa184;
   --accent-soft: #2a1a16;
+  --on-accent: #101725;
 
   --script: #9fb0d0;
 
@@ -55,6 +59,7 @@
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
   --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
   --color-script: var(--script);
   --color-tint-blue: var(--tint-blue);
   --color-tint-peach: var(--tint-peach);
@@ -82,25 +87,9 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Fraunces reads best with a little extra optical weight at display sizes. */
-.font-display {
-  font-variation-settings: "SOFT" 0, "WONK" 1;
-  letter-spacing: -0.02em;
-}
-
 ::selection {
   background: var(--accent);
-  color: #16233f;
-}
-
-/* A hand-drawn stroke that reveals itself on hover/focus of its parent. */
-@keyframes draw-swoosh {
-  from {
-    stroke-dashoffset: var(--swoosh-length, 240);
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+  color: var(--on-accent);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -114,8 +103,5 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
-  }
-  .motion-lift:hover {
-    transform: none !important;
   }
 }

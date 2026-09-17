@@ -46,7 +46,7 @@ export default function FeaturedProject({ project }: { project: Project }) {
       <div className="mt-5 flex flex-1 flex-col gap-6 lg:flex-row lg:gap-4">
         <div className="lg:w-[56%]">
           <p className="text-sm leading-relaxed text-muted">{project.summary}</p>
-          <StorySteps story={project.story} className="mt-5" />
+          <StorySteps story={project.story} headingLevel="h4" className="mt-5" />
         </div>
 
         {/* The phone sits in its own column on wide screens, centred on narrow ones.
@@ -63,7 +63,7 @@ export default function FeaturedProject({ project }: { project: Project }) {
             </Annotation>
           )}
           {Screen && (
-            <PhoneMockup className="w-[158px] sm:w-[178px]">
+            <PhoneMockup width={172}>
               <Screen />
             </PhoneMockup>
           )}

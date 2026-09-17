@@ -218,7 +218,7 @@ export default function ArtisteDemo() {
             <button
               type="button"
               onClick={() => submit("buy")}
-              className="rounded-md bg-fg py-2 text-sm font-medium text-bg transition hover:bg-accent"
+              className="rounded-md bg-fg py-2 text-sm font-medium text-bg transition hover:bg-accent hover:text-on-accent"
             >
               {inFlight ? "Committing…" : "Buy"}
             </button>

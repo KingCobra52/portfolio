@@ -103,7 +103,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
 
           <section className="mt-14">
             <div className="border-t border-border pt-4">
-              <Eyebrow>Details</Eyebrow>
+              <Eyebrow as="h2">Details</Eyebrow>
             </div>
             <ul className="mt-5 max-w-3xl space-y-3">
               {project.bullets.map((b) => (
@@ -130,7 +130,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
 
           <section className="mt-14">
             <div className="border-t border-border pt-4">
-              <Eyebrow>What I learned</Eyebrow>
+              <Eyebrow as="h2">What I learned</Eyebrow>
             </div>
             <blockquote className="font-display relative mt-5 max-w-3xl text-xl font-medium leading-relaxed sm:text-2xl">
               <span
@@ -144,7 +144,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
           </section>
 
           <nav aria-label="Next project" className="mt-16 border-t border-border pt-6">
-            <Eyebrow>Next project</Eyebrow>
+            <Eyebrow as="h2">Next project</Eyebrow>
             <Link
               href={`/projects/${next.slug}`}
               className="group mt-2 inline-flex items-baseline gap-3"

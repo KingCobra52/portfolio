@@ -13,9 +13,10 @@ const sizes = {
 
 const variants: Record<Variant, string> = {
   // Deep navy pill -- the nav's "Let's build".
-  primary: "bg-fg text-bg hover:bg-accent hover:text-fg",
-  // Bright coral with navy text: 4.67:1, so it clears AA at this size.
-  coral: "bg-accent text-fg hover:brightness-95",
+  primary: "bg-fg text-bg hover:bg-accent hover:text-on-accent",
+  // Bright coral. on-accent stays navy in both themes; text-fg would be
+  // cream in dark mode, which is only 2.09:1 on coral.
+  coral: "bg-accent text-on-accent hover:brightness-95",
   outline: "border border-fg/25 text-fg hover:border-accent hover:text-accent-ink",
   ghost: "text-muted hover:text-fg",
 };

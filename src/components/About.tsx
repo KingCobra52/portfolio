@@ -43,7 +43,7 @@ export default function About() {
               {education.degree}
             </h3>
             <p className="mt-0.5 font-sans text-xs text-muted">
-              {education.school} &middot; {education.period}
+              {education.school} &middot; {education.location} &middot; {education.period}
             </p>
             <p className="mt-2.5 text-sm italic leading-relaxed text-muted">
               {education.coursework.join(" · ")}
