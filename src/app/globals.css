@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* Opt out of the prefers-color-scheme strategy: the theme lives on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Warm cream paper, navy ink, coral accent. */
+  --bg: #fbf8f3;
+  --bg-elevated: #ffffff;
+  --fg: #16233f;
+  --muted: #5a6885;
+  --border: #e3ddd1;
+
+  /* Bright coral for fills, rules and large display text.
+     accent-ink is the deeper coral small text needs to clear 4.5:1. */
+  --accent: #f05c34;
+  --accent-ink: #b83a1c;
+  --accent-soft: #fdeae2;
+  /* Text sitting on top of --accent. Stays dark in both themes: cream on
+     coral is only 2.09:1, navy on coral is 4.67:1 (light) / 6.97:1 (dark). */
+  --on-accent: #16233f;
+
+  /* Handwritten annotation ink. */
+  --script: #3a4a6b;
+
+  /* Panel washes. */
+  --tint-blue: #e7edf7;
+  --tint-peach: #fbe8df;
+  --tint-slate: #eceee8;
+  --tint-sky: #e8eef6;
+}
+
+.dark {
+  --bg: #101725;
+  --bg-elevated: #161f31;
+  --fg: #ece7de;
+  --muted: #97a3bc;
+  --border: #263046;
+
+  --accent: #ff7a55;
+  --accent-ink: #ffa184;
+  --accent-soft: #2a1a16;
+  --on-accent: #101725;
+
+  --script: #9fb0d0;
+
+  --tint-blue: #1b2740;
+  --tint-peach: #2b2029;
+  --tint-slate: #1a2030;
+  --tint-sky: #182237;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-script: var(--script);
+  --color-tint-blue: var(--tint-blue);
+  --color-tint-peach: var(--tint-peach);
+  --color-tint-slate: var(--tint-slate);
+  --color-tint-sky: var(--tint-sky);
+
+  /* Self-hosted variable fonts, imported in layout.tsx. */
+  --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
+  --font-serif: "Source Serif 4 Variable", Georgia, "Times New Roman", serif;
+  --font-script: "Caveat Variable", "Segoe Script", cursive;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Display-only grade so the portrait sits in the page's warm palette instead
+   of reading as a dark rectangle on cream. Delete this rule to show the photo
+   exactly as supplied -- the file itself is untouched either way. */
+.portrait-lift {
+  filter: brightness(1.06) contrast(1.03) saturate(1.04);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
