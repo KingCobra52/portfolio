@@ -51,3 +51,21 @@ export function MoonIcon({ className = "h-5 w-5" }: IconProps) {
     </svg>
   );
 }
+
+export function ServerIcon({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+      <rect x="3" y="4" width="18" height="7" rx="1.5" />
+      <rect x="3" y="13" width="18" height="7" rx="1.5" />
+      <path d="M7 7.5h.01M7 16.5h.01M11 7.5h3M11 16.5h3" />
+    </svg>
+  );
+}
+
+export function CodeIcon({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className}>
+      <path d="m9 17-5-5 5-5M15 7l5 5-5 5" />
+    </svg>
+  );
+}

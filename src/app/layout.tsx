@@ -1,4 +1,13 @@
 import type { Metadata } from "next";
+
+// Self-hosted variable fonts. Google Fonts is not reachable from the build
+// environment, and self-hosting also drops a third-party request at runtime.
+import "@fontsource-variable/fraunces";
+import "@fontsource-variable/fraunces/wght-italic.css";
+import "@fontsource-variable/source-serif-4";
+import "@fontsource-variable/source-serif-4/wght-italic.css";
+import "@fontsource-variable/caveat";
+
 import "./globals.css";
 import { profile } from "@/data/profile";
 

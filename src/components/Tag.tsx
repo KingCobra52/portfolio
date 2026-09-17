@@ -1,7 +1,8 @@
-export default function Tag({ children }: { children: React.ReactNode }) {
+/** The comma-separated tech run used under project names. */
+export function TechList({ items, className = "" }: { items: string[]; className?: string }) {
   return (
-    <span className="inline-block rounded-full border border-border bg-bg-elevated px-2.5 py-0.5 text-xs font-medium text-muted">
-      {children}
-    </span>
+    <p className={`font-serif text-sm italic leading-relaxed text-muted ${className}`}>
+      {items.join(", ")}
+    </p>
   );
 }

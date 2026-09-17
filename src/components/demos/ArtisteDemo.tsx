@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Sparkline from "./Sparkline";
+import { chipButtonClass, fieldClass } from "./controls";
 
 type Artist = { id: string; name: string; genre: string; drift: number; vol: number; start: number };
 
@@ -139,8 +140,7 @@ export default function ArtisteDemo() {
     log("info", `Pipeline run for day ${day + 1}: refreshed ${artists.length} artists from streaming data. Idempotent, so a retry would change nothing.`);
   }
 
-  const inputClass =
-    "w-full rounded-md border border-border bg-bg px-3 py-2 text-sm focus-visible:outline-2 focus-visible:outline-accent";
+  const inputClass = `w-full ${fieldClass}`;
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr]">
@@ -151,7 +151,7 @@ export default function ArtisteDemo() {
           <button
             type="button"
             onClick={nextDay}
-            className="rounded-md border border-border px-3 py-1.5 text-xs font-medium transition hover:border-accent hover:text-accent"
+            className={chipButtonClass}
           >
             Run daily pipeline →
           </button>
@@ -218,7 +218,7 @@ export default function ArtisteDemo() {
             <button
               type="button"
               onClick={() => submit("buy")}
-              className="rounded-md bg-fg py-2 text-sm font-medium text-bg transition hover:bg-accent"
+              className="rounded-md bg-fg py-2 text-sm font-medium text-bg transition hover:bg-accent hover:text-on-accent"
             >
               {inFlight ? "Committing…" : "Buy"}
             </button>
