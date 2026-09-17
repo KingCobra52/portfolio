@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #fafaf7;
+  --bg-elevated: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #5f5f5a;
+  --border: #e6e4dc;
+  --accent: #b4532a;
+  --accent-soft: #f6e8df;
+}
+
+.dark {
+  --bg: #0e0f11;
+  --bg-elevated: #16181c;
+  --fg: #ececea;
+  --muted: #9a9a94;
+  --border: #26292f;
+  --accent: #f0895a;
+  --accent-soft: #2b1d16;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
